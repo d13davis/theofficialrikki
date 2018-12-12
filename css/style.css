@@ -216,7 +216,7 @@ body {
 }
 
 header {
-  background-image: url('/img/header.jpg');
+  background-image: url('header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -246,7 +246,7 @@ header p {
   margin: 9px 10px;
   border-radius: 10px;
   background: #984541;
-  background-image: url('/img/btn-background.jpg');
+  background-image: url('btn-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
