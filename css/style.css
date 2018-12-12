@@ -1,0 +1,318 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* my code starts here */
+
+body {
+  background-color: #222;
+}
+
+.index-nav {
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+}
+
+.index-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.index-nav ul li {
+  height: 100%;
+}
+
+
+.index-nav ul li img {
+  display: none;
+}
+
+.index-nav ul li span {
+  font-size: 20px;
+  color: #707070;
+  font-family: Segoe Print;
+  padding-left: 2em;
+  padding-right: 2em;
+  height: 100%;
+  line-height: 70px;
+}
+
+.index-nav ul li a {
+  line-height: 70px;
+  text-decoration: none;
+  color: #111;
+  height: 100%;
+  padding: 0 15px;
+  font-family: serif;
+  font-size: 20px;
+  display: block;
+}
+
+.index-nav ul li a:hover {
+  background-color: #f1f1f1;
+}
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 17px;
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #707070;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.nav-sidebar {
+  position: fixed;
+  right: 0;
+  top: 70px;
+  width: 0px;
+  height: 210px;
+  padding: 0;
+  background: #984541;
+  z-index: 1000;
+  opacity: 0;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-sidebar ul {
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.nav-sidebar ul li a {
+  display: block;
+  line-height: 70px;
+  padding: 0 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: arial;
+  font-size: 16px;
+  white-space: nowrap;
+  opacity: 0;
+  letter-spacing: 3px;
+
+  transition: all 1s ease-in-out;
+}
+
+.nav-sidebar ul li a:hover {
+  background-color: #523030;
+}
+
+header {
+  background-image: url(/img/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 200px;
+}
+
+header h1 {
+  font-size: 70px;
+  color: white;
+  line-height: 100px;
+  letter-spacing: 12px;
+  box-shadow: 1px 1px 8px #111;
+  text-shadow: 5px 5px 8px #111;
+}
+
+header p {
+  font-size: 20px;
+  color: white;
+  line-height: 100px;
+  font-style: italic;
+  letter-spacing: 7px;
+}
+
+.about-me-btn {
+  height: calc(100vh - 490px);
+  background-color: red;
+  margin: 9px 10px;
+  border-radius: 10px;
+  background: #984541;
+  background-image: url(/img/btn-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: all 1s ease-in-out;
+}
+
+.about-me-btn h3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 5px 5px 8px #111;
+  font-family: cursive;
+}
+
+.about-me-btn:hover {
+  background-color: #523030;
+}
+
+.about-me {
+  display: none;
+}
+
+
+
+@keyframes backgroundOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+@media only screen and (max-width: 370px) {
+  .index-nav ul li a {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 371px) {
+  .index-nav ul li a {
+    display: none;
+  }
+  .index-nav ul li span {
+    padding-right: auto;
+  }
+
+@media only screen and (min-width: 400px) {
+  .index-nav ul li span {
+    padding-right: 1em;
+  }
+}
+
+@media only screen and (min-height: 750px) {
+  header {
+    padding-top: 300px;
+  }
+  .about-me-btn {
+    height: calc(100vh - 590px);
+  }
+}
