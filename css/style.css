@@ -213,7 +213,7 @@ html, body {
 }
 
 header {
-  background-image: url('../img/mobileheader.jpg');
+  background-image: url('https://d13davis.github.io/theofficialrikki/img/mobileheader.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -300,7 +300,7 @@ header p {
     background: #1F5400;
   }
   header {
-    background-image: url('../img/tabletheader.jpg');
+    background-image: url('https://d13davis.github.io/theofficialrikki/img/tabletheader.jpg');
     padding-top: 370px;
     padding-bottom: 140px;
   }
