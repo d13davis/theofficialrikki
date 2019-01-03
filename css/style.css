@@ -339,6 +339,8 @@ header p {
   }
 }
 
+/* desktop view */
+
 @media screen and (min-width: 1000px) {
   body {
     background-color: #59BBBA;
@@ -393,7 +395,8 @@ header p {
   .about-me {
     background-color: #59BBBA;
     height: auto;
-    min-height: 100vh;
+    min-height: 90vh;
+    padding-top: 10vh;
   }
   .about-me .about-me-wrapper {
     width: 75%;
