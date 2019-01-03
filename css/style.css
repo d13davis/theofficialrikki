@@ -212,7 +212,7 @@ html, body {
 }
 
 header {
-  background-image: url('../img/mobileheader.jpg');
+  background-image: url('/../img/mobileheader.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
