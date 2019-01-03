@@ -4,18 +4,16 @@
     <meta charset="utf-8">
     <title>The Official Rikki</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <nav class="index-nav">
       <ul>
-        <li><img src="img/logo.jpg" alt="the official rikki"></li>
         <li><span>rikki</span></li>
         <li><a href="#">Home</a></li>
         <li><a href="#">Gallery</a></li>
         <li><a href="#">Blog</a></li>
-        <div class="hamburger" onclick="hamburger(this), toggleNav()">
+        <div id="hamburger" class="hamburger" onclick="hamburger(this), toggleNav()">
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
@@ -29,14 +27,17 @@
         <li><a href="#">Blog</a></li>
       </ul>
     </aside>
-    <header>
+    <header onclick="unfocusNav()">
+      <h3>the official</h3>
       <h1>rikki</h1>
       <p>Model | Influencer</p>
     </header>
-    <div class="about-me-btn"><h3>About Me</h3></div>
     <section class="about-me">
-      <h3>About Me!</h3>
-      <p>My name is Rikki and I am a androgynous blogger located in Colorado promoting self acceptance, positivity, and freedom from the normal standards of beauty. This blog is dedicated to the idea that a man can be gorgeous, as well as a women can be handsome. "Androgynous today means that men and women have the same attitude towards what they want to wear... It's not unisex dressing, but more the idea that you can see a jacket on a women in this show, which you can easily see on a man." - Giorgio Armani</p>
+      <h3>About Me</h3>
+      <hr class="yellow-spacer">
+      <p>My name is Rikki and I am an androgynous blogger located in Colorado promoting self acceptance, positivity, and freedom from the normal standards of beauty. This blog is dedicated to the idea that a man can be gorgeous, as well as a women can be handsome.</p>
+      <hr class="yellow-spacer-p">
+      <p>"Androgynous today means that men and women have the same attitude towards what they want to wear... It's not unisex dressing, but more the idea that you can see a jacket on a women in this show, which you can easily see on a man." <br>- Giorgio Armani</p>
     </section>
   </body>
   <script src="js/main.js"></script>

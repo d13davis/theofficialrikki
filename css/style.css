@@ -1,5 +1,5 @@
 html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
@@ -15,8 +15,8 @@ time, mark, audio, video {
     border:0;
     outline:0;
     font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 body {
@@ -95,50 +95,45 @@ input, select {
 
 /* my code starts here */
 
-body {
-  background-color: #222;
+
+@keyframes backgroundOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+html, body {
+  width: 100%;
 }
 
 .index-nav {
   width: 100%;
-  height: 70px;
-  background-color: #fff;
-}
-
-.index-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-}
-
-.index-nav ul li {
-  height: 100%;
-}
-
-
-.index-nav ul li img {
-  display: none;
+  height: 60px;
 }
 
 .index-nav ul li span {
   font-size: 20px;
-  color: #707070;
+  color: #34888C;
   font-family: Segoe Print;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 1em;
   height: 100%;
-  line-height: 70px;
+  line-height: 60px;
+  float: left;
 }
 
 .index-nav ul li a {
-  line-height: 70px;
+  line-height: 60px;
   text-decoration: none;
   color: #111;
   height: 100%;
   padding: 0 15px;
   font-family: serif;
   font-size: 20px;
-  display: block;
+  display: none;
 }
 
 .index-nav ul li a:hover {
@@ -146,17 +141,16 @@ body {
 }
 
 .hamburger {
-  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 20px;
   cursor: pointer;
-  margin-top: 17px;
-  margin-left: auto;
-  margin-right: 2em;
 }
 
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #707070;
+  background-color: #34888C;
   margin: 6px 0;
   transition: 0.4s;
   border-radius: 5px;
@@ -183,7 +177,7 @@ body {
   width: 0px;
   height: 210px;
   padding: 0;
-  background: #984541;
+  background: #464E41;
   z-index: 1000;
   opacity: 0;
 
@@ -193,6 +187,7 @@ body {
 .nav-sidebar ul {
   overflow: hidden;
   visibility: hidden;
+  width: 100%;
 }
 
 .nav-sidebar ul li a {
@@ -212,107 +207,81 @@ body {
 }
 
 .nav-sidebar ul li a:hover {
-  background-color: #523030;
+  background-color: #F5E356;
+  color: #111;
 }
 
 header {
-  background-image: url('header.jpg');
+  background-image: url('../img/mobileheader.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 200px;
+  padding-top: 390px;
+  width: 100%;
+  padding-bottom: 120px;
+}
+
+header h3 {
+  color: #fff;
+  float: right;
+  margin-right: 70px;
+  font-size: 20px;
+  font-family: Segoe Print;
 }
 
 header h1 {
-  font-size: 70px;
-  color: white;
-  line-height: 100px;
-  letter-spacing: 12px;
-  box-shadow: 1px 1px 8px #111;
-  text-shadow: 5px 5px 8px #111;
+  display: block;
+  margin-top: 30px;
+  margin-left: 240px;
+  font-size: 50px;
+  color: #F5E356;
+  font-family: Segoe Print;
 }
 
 header p {
-  font-size: 20px;
-  color: white;
-  line-height: 100px;
-  font-style: italic;
-  letter-spacing: 7px;
-}
-
-.about-me-btn {
-  height: calc(100vh - 490px);
-  background-color: red;
-  margin: 9px 10px;
-  border-radius: 10px;
-  background: #984541;
-  background-image: url('btn-background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  transition: all 1s ease-in-out;
-}
-
-.about-me-btn h3 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 30px;
-  color: white;
-  text-shadow: 5px 5px 8px #111;
-  font-family: cursive;
-}
-
-.about-me-btn:hover {
-  background-color: #523030;
-}
-
-.about-me {
   display: none;
 }
 
-
-
-@keyframes backgroundOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.about-me {
+  width: 100%;
+  background-color: #464E41;
 }
 
-
-
-@media only screen and (max-width: 370px) {
-  .index-nav ul li a {
-    display: none;
-  }
+.about-me h3 {
+  color: #fff;
+  font-size: 40px;
+  padding: 50px 0 30px 0;
+  font-family: Segoe Print;
+  width: 100%;
+  margin: 0px;
+  text-align: center;
 }
 
-@media only screen and (min-width: 371px) {
-  .index-nav ul li a {
-    display: none;
-  }
-  .index-nav ul li span {
-    padding-right: auto;
-  }
-
-@media only screen and (min-width: 400px) {
-  .index-nav ul li span {
-    padding-right: 1em;
-  }
+.yellow-spacer {
+  width: 70%;
+  height: 3px;
+  line-height: 3px;
+  margin: 0 auto 10px;
+  background-color: #F5E356;
+  opacity: 0.8;
+  border-radius: 5px;
 }
 
-@media only screen and (min-height: 750px) {
-  header {
-    padding-top: 300px;
-  }
-  .about-me-btn {
-    height: calc(100vh - 590px);
-  }
+.yellow-spacer-p {
+  width: 88%;
+  height: 3px;
+  line-height: 3px;
+  margin: 0 auto 10px;
+  background-color: #F5E356;
+  opacity: 0.8;
+  border-radius: 5px;
+}
+
+.about-me p {
+  padding-left: 1em;
+  padding-right: 20px;
+  font-family: Gabriola;
+  color: #fff;
+  font-size: 25px;
+  line-height: 47px;
 }

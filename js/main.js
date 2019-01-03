@@ -11,7 +11,8 @@ let toggleNav = function() {
 
   if (toggleNavStatus == false) {
     getSidebarUL.style.visibility = "visible";
-    getSidebar.style.width = "200px";
+    getSidebar.style.width = "300px";
+    getSidebar.style.margin = "0 auto";
     getSidebar.style.opacity = "1";
 
     let arrayLength = getSidebarLinks.length;
@@ -30,9 +31,17 @@ let toggleNav = function() {
     }
 
     getSidebarUL.style.visibility = "hidden";
-    getSidebar.style.width = "50px";
+    getSidebar.style.width = "0px";
     getSidebar.style.opacity = "0";
 
     toggleNavStatus = false;
+  }
+};
+
+let unfocusNav = function() {
+  if (toggleNavStatus == true) {
+    toggleNav();
+    let ham = document.querySelector('#hamburger');
+    hamburger(ham);
   }
 };
