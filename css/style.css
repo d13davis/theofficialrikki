@@ -284,7 +284,7 @@ header p {
   width: 88%;
   height: 3px;
   line-height: 3px;
-  margin: 0 auto 10px;
+  margin: 10px auto 10px;
   background-color: #F5E356;
   opacity: 0.8;
   border-radius: 5px;
