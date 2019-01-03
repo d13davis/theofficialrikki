@@ -219,7 +219,7 @@ html, body {
 }
 
 header {
-  background-image: url('https://d13davis.github.io/theofficialrikki/img/mobileheader.jpg');
+  background-image: url('../img/mobileheader.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -306,11 +306,14 @@ header p {
 
 /* tablet resize */
 @media screen and (min-width: 695px) {
+  .index-nav {
+    background-color: #fff;
+  }
   .nav-sidebar {
     background: #1F5400;
   }
   header {
-    background-image: url('https://d13davis.github.io/theofficialrikki/img/tabletheader.jpg');
+    background-image: url('../img/tabletheader.jpg');
     padding-top: 370px;
     padding-bottom: 140px;
   }
@@ -335,6 +338,9 @@ header p {
 }
 
 @media screen and (min-width: 1000px) {
+  body {
+    background-color: #59BBBA;
+  }
   .index-nav {
     height: 70px;
   }
@@ -354,7 +360,7 @@ header p {
     display: none;
   }
   header {
-    background-image: url('https://d13davis.github.io/theofficialrikki/img/desktopheader.jpg');
+    background-image: url('../img/desktopheader.jpg');
     padding-bottom: 800px;
     padding-top: 90px;
   }
@@ -384,7 +390,8 @@ header p {
   }
   .about-me {
     background-color: #59BBBA;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
   }
   .about-me .about-me-wrapper {
     width: 75%;
@@ -393,13 +400,15 @@ header p {
   .about-me .img-choose {
     display: inline;
     float: left;
-    margin-left: 200px;
-    margin-top: 50px;
+    margin-top: 2em;
   }
   .about-me .img-choose img:nth-child(1) {
-    height: 70vh;
+    width: auto;
+    height: 40vw;
     border-radius: 5px;
     box-shadow: 5px 3px 3px;
+    margin-left: 20%;
+    max-height: 550px;
   }
   .about-me .img-choose img:nth-child(2) {
     height: 70vh;
@@ -411,7 +420,8 @@ header p {
     display: none;
   }
   .about-me-p {
-    width: 40%;
+    width: 50%;
     float: left;
+    margin: 0 0 0 10%;
   }
 }
