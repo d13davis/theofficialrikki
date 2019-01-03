@@ -299,28 +299,33 @@ header p {
   .nav-sidebar {
     background: #1F5400;
   }
+
   header {
     background-image: url('https://d13davis.github.io/theofficialrikki/img/tabletheader.jpg');
     padding-top: 370px;
     padding-bottom: 140px;
   }
+
   .about-me {
     background-color: #1F5400;
   }
+
   header h3 {
     margin-right: 90px;
   }
+
   header h1 {
     margin-left: 75%;
     font-size: 60px;
   }
+
   .yellow-spacer-p {
     margin: 20px auto 20px;
   }
+
   .about-me p {
     padding-left: 2em;
     padding-right: 2em;
     line-height: 60px;
   }
-
 }
