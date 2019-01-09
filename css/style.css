@@ -202,7 +202,7 @@ html, body {
 .nav-sidebar ul li a {
   display: block;
   line-height: 70px;
-  padding: 0 10px;
+  padding: 0 0 0 30px;
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
@@ -211,7 +211,7 @@ html, body {
   white-space: nowrap;
   opacity: 0;
   letter-spacing: 3px;
-
+  cursor: default;
   transition: all 1s ease-in-out;
 }
 
@@ -237,6 +237,7 @@ header h3 {
   font-size: 20px;
   letter-spacing: 3px;
   font-family: 'Kaushan Script', cursive;
+  cursor: default;
 }
 
 header h1 {
@@ -247,15 +248,21 @@ header h1 {
   font-size: 50px;
   color: #F5E356;
   font-family: 'Kaushan Script', cursive;
+  cursor: default;
 }
 
 header p {
   display: none;
+  cursor: default;
 }
 
 .about-me {
   width: 100%;
   background-color: #464E41;
+  padding-bottom: 50px;
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+  overflow: hidden;
 }
 
 .about-me .img-choose {
@@ -295,16 +302,30 @@ header p {
 .about-me p {
   padding-left: 1em;
   padding-right: 20px;
-  font-family: 'Philosopher', sans-serif;
+  font-family: arial;
   color: #fff;
   font-size: 25px;
   line-height: 47px;
 }
 
-.about-me .quote {
-  font-family: 'Charm', cursive;
+.about-me h3, .about-me .img-choose, .about-me .about-me-p {
+  transition: all 0.8s ease;
 }
 
+.about-me h3.hidden {
+  opacity: 0;
+  transform: translate3d(0, -400px, 0);
+}
+
+.about-me .img-choose.hidden {
+  opacity: 0;
+  transform: translate3d(400px, 0, 0);
+}
+
+.about-me .about-me-p.hidden {
+  opacity: 0;
+  transform: translate3d(-400px, 0, 0);
+}
 
 /* tablet resize */
 @media screen and (min-width: 695px) {

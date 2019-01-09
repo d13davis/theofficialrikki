@@ -45,3 +45,19 @@ let unfocusNav = function() {
     hamburger(ham);
   }
 };
+
+
+(function() {
+  let documentElem = $(document);
+  let aboutMeTitle = $('.about-me h3'), aboutMeTitleOffset = aboutMeTitle.offset().top/2;
+  let aboutMeImage = $('.about-me .img-choose'), aboutMeImageOffset = aboutMeImage.offset().top/2;
+  let aboutMeP = $('.about-me .about-me-p'), aboutMePOffset = aboutMeP.offset().top/2;
+  documentElem.on('scroll', function() {
+    if (documentElem.scrollTop() > aboutMeTitleOffset && aboutMeTitle.hasClass('hidden')) aboutMeTitle.removeClass('hidden');
+
+    if (documentElem.scrollTop() > aboutMeImageOffset && aboutMeImage.hasClass('hidden')) aboutMeImage.removeClass('hidden');
+
+    if (documentElem.scrollTop() > aboutMePOffset && aboutMeP.hasClass('hidden')) aboutMeP.removeClass('hidden');
+
+  });
+})();
