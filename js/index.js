@@ -38,14 +38,6 @@ let toggleNav = function() {
   }
 };
 
-let unfocusNav = function() {
-  if (toggleNavStatus == true) {
-    toggleNav();
-    let ham = document.querySelector('#hamburger');
-    hamburger(ham);
-  }
-};
-
 
 (function() {
   let documentElem = $(document);
@@ -54,7 +46,7 @@ let unfocusNav = function() {
   let aboutMeYellowSp = $('.about-me .about-me-p .yellow-spacer'), aboutMeYellowSpOffset = aboutMeYellowSp.offset().top/2;
   let aboutMeBase = $('.about-me .about-me-p .base'), aboutMeBaseOffset = aboutMeBase.offset().top/2;
   let aboutMeYellowSpP = $('.about-me .about-me-p .yellow-spacer-p'), aboutMeYellowSpPOffset = aboutMeYellowSpP.offset().top/2;
-  let aboutMeQuote = $('.about-me .about-me-p .quote'), aboutMeQuoteOffset = aboutMeQuote.offset().top/2;
+  let aboutMeQuote = $('.about-me .about-me-p .quote'), aboutMeQuoteOffset = aboutMeQuote.offset().top/2.25;
   documentElem.on('scroll', function() {
     if (documentElem.scrollTop() > aboutMeTitleOffset && aboutMeTitle.hasClass('hidden')) aboutMeTitle.removeClass('hidden');
 
@@ -69,3 +61,11 @@ let unfocusNav = function() {
     if (documentElem.scrollTop() > aboutMeQuoteOffset && aboutMeQuote.hasClass('hidden')) aboutMeQuote.removeClass('hidden');
   });
 })();
+
+let unfocusNav = function() {
+  if (toggleNavStatus == true) {
+    toggleNav();
+    let ham = document.querySelector('#hamburger');
+    hamburger(ham);
+  }
+};

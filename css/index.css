@@ -95,16 +95,6 @@ input, select {
 
 /* my code starts here */
 
-@keyframes backgroundOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
 html, body {
   width: 100%;
 }

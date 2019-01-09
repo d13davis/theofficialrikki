@@ -1,0 +1,268 @@
+html, body, div, span, object, iframe,
+h1, h2, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* my code starts here */
+
+html, body {
+  width: 100%;
+}
+
+.gallery-nav {
+  width: 100%;
+  height: 60px;
+}
+
+.gallery-nav ul li span {
+  font-size: 30px;
+  color: #03A8BE;
+  font-family: 'Kaushan Script', cursive;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 1em;
+  height: 100%;
+  line-height: 60px;
+  float: left;
+  cursor: default;
+}
+
+.gallery-nav ul li a {
+  line-height: 70px;
+  text-decoration: none;
+  color: #03A8BE;
+  height: 100%;
+  padding: 0 15px;
+  font-family: 'Happy Monkey', cursive;
+  font-size: 30px;
+  float: right;
+  margin-right: 50px;
+  display: none;
+}
+
+.gallery-nav ul li:nth-child(2) {
+  margin-right: 50px;
+}
+
+.gallery-nav ul li a:hover {
+  background-color: #f1f1f1;
+}
+
+.hamburger {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #03A8BE;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.nav-sidebar {
+  position: fixed;
+  right: 0;
+  top: 70px;
+  width: 0px;
+  height: 210px;
+  padding: 0;
+  background: #003E58;
+  z-index: 1000;
+  opacity: 0;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-sidebar ul {
+  overflow: hidden;
+  visibility: hidden;
+  width: 100%;
+}
+
+.nav-sidebar ul li a {
+  display: block;
+  line-height: 70px;
+  padding: 0 0 0 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: arial;
+  font-size: 16px;
+  white-space: nowrap;
+  opacity: 0;
+  letter-spacing: 3px;
+  cursor: default;
+  transition: all 1s ease-in-out;
+}
+
+.nav-sidebar ul li a:hover {
+  background-color: #FCC404;
+  color: #111;
+}
+
+header {
+  background-image: url('../img/gallery-header.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+header h1 {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 60px;
+  color: #003E58;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 25vh;
+}
+
+.gallery-wrapper {
+  background-color: #EBFDFD;
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-wrapper img {
+  width: calc(100vw - 40px);
+  margin: 15px 20px;
+}
+
+@media screen and (min-width: 1000px) {
+  .gallery-nav {
+    height: 70px;
+  }
+  .gallery-nav ul li span {
+    line-height: 70px;
+    margin-left: 100px;
+    padding-left: 0px;
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+  .gallery-nav ul li a {
+    display: inline;
+  }
+  .hamburger {
+    display: none;
+  }
+  .gallery-wrapper .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .gallery-wrapper img{
+    max-width: 30vw;
+    height: 800px;
+  }
+}
