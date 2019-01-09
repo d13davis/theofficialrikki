@@ -308,7 +308,7 @@ header p {
   line-height: 47px;
 }
 
-.about-me h3, .about-me .img-choose, .about-me .about-me-p {
+.about-me h3, .about-me .img-choose, .about-me .about-me-p .yellow-spacer, .about-me .about-me-p .base, .about-me .about-me-p .yellow-spacer-p, .about-me .about-me-p .quote {
   transition: all 0.8s ease;
 }
 
@@ -322,10 +322,24 @@ header p {
   transform: translate3d(400px, 0, 0);
 }
 
-.about-me .about-me-p.hidden {
+.about-me .about-me-p .yellow-spacer.hidden {
   opacity: 0;
   transform: translate3d(-400px, 0, 0);
 }
+
+.about-me .about-me-p .base.hidden {
+  opacity: 0;
+  transform: translate3d(-400px, 0, 0);
+}
+.about-me .about-me-p .yellow-spacer-p.hidden {
+  opacity: 0;
+  transform: translate3d(-400px, 0, 0);
+}
+.about-me .about-me-p .quote.hidden {
+  opacity: 0;
+  transform: translate3d(-400px, 0, 0);
+}
+
 
 /* tablet resize */
 @media screen and (min-width: 695px) {
