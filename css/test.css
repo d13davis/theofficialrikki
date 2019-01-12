@@ -1,0 +1,86 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #111;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 33vw;
+}
+
+.container img:nth-child(1), .container img:nth-child(2), .container img:nth-child(3) {
+  transition: all 2s ease;
+}
+
+.container img:nth-child(1) {
+  height: 99.6vh;
+  width: auto;
+  position: absolute;
+  opacity: 1;
+}
+
+.container img:nth-child(2) {
+  height: 99.6vh;
+  width: auto;
+  position: absolute;
+  right: -100%;
+  opacity: 0;
+}
+
+.container img:nth-child(3) {
+  height: 99.6vh;
+  width: auto;
+  position: absolute;
+  right: -100%;
+  opacity: 0;
+}
+
+
+
+
+
+.container img:nth-child(4) {
+  height: 99vh;
+  width: auto;
+  opacity: 0;
+  display: none;
+}
+
+#last, #next {
+  font-size: 60px;
+  line-height: 80px;
+  color: #fff;
+  height: 100%;
+  width: 80px;
+  z-index: 1000;
+  text-align: center;
+  cursor: default;
+}
+
+#last:hover, #next:hover {
+  background-color: #1e1e1e;
+}
+
+
+#last {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 45vh;
+}
+
+#next {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding-top: 45vh;
+}
