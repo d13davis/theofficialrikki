@@ -239,9 +239,17 @@ header h1 {
   margin: 15px 20px;
 }
 
+#last, #next {
+  display: none;
+}
+
 @media screen and (min-width: 1000px) {
+  body {
+    background-color: #EBFDFD;
+  }
   .gallery-nav {
     height: 70px;
+    background-color: #fff;
   }
   .gallery-nav ul li span {
     line-height: 70px;
@@ -256,13 +264,83 @@ header h1 {
   .hamburger {
     display: none;
   }
-  .gallery-wrapper .row {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+  header {
+    height: 30vh;
   }
-  .gallery-wrapper img{
-    max-width: 30vw;
-    height: 800px;
+  header h1 {
+    padding-top: 20vh;
   }
+  .gallery-wrapper {
+    background-color: #EBFDFD;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 33vw;
+  }
+  .gallery-wrapper img:nth-child(1) {
+    height: 99.6vh;
+    width: auto;
+    position: absolute;
+  }
+
+  .gallery-wrapper img:nth-child(2) {
+    height: 99.6vh;
+    width: auto;
+    position: absolute;
+  }
+
+  .gallery-wrapper img:nth-child(3) {
+    height: 99.6vh;
+    width: auto;
+    position: absolute;
+  }
+
+  .gallery-wrapper img:nth-child(4) {
+    height: 99vh;
+    width: auto;
+    position: absolute;
+  }
+
+  .gallery-wrapper img:nth-child(1), .gallery-wrapper img:nth-child(2), .gallery-wrapper img:nth-child(3), .gallery-wrapper img:nth-child(4) {
+    background-color: #EBFDFD;
+    transition: all 2s ease;
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+
+  #last, #next {
+    display: inline;
+    line-height: 80px;
+    height: 100%;
+    width: 100px;
+    z-index: 1000;
+    cursor: default;
+    transition: all .75s ease;
+  }
+
+  #last:hover, #next:hover {
+    background-color: #003E58;
+  }
+
+  #last {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 45vh;
+    padding-right: 35px;
+    padding-left: 10px;
+  }
+
+  #next {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-top: 45vh;
+    padding-left: 35px;
+    padding-right: 10px;
+  }
+
 }

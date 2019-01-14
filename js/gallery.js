@@ -45,3 +45,45 @@ let unfocusNav = function() {
     hamburger(ham);
   }
 };
+
+let gallArray = [$('.gall-1'), $('.gall-2'), $('.gall-3'), $('.gall-4')];
+
+let i = 0;
+
+let nextPic = function() {
+  if (i < 3 && !gallArray[i].hasClass('hidden')) {
+    gallArray[i].addClass('hidden');
+    i = ++i;
+    gallArray[i].removeClass('hidden');
+  } else if (i == 3 && !gallArray[i].hasClass('hidden')) {
+    gallArray[i].addClass('hidden');
+    i = 0;
+    gallArray[i].removeClass('hidden');
+  }
+};
+
+let lastPic = function() {
+  if (i == 0 && !gallArray[i].hasClass('hidden')) {
+    gallArray[0].addClass('hidden');
+    gallArray[3].removeClass('hidden');
+    i = 3;
+  } else if (i > 0 && !gallArray[i].hasClass('hidden')) {
+    gallArray[i].addClass('hidden');
+    i = --i;
+    gallArray[i].removeClass('hidden');
+  }
+};
+
+(function() {
+  let documentElem = $(document);
+  let next = $('#next'),
+      nextOffset = next.offset().top,
+      last = $('#last'),
+      lastOffset = last.offset().top;
+  documentElem.on('scroll', function() {
+    if (documentElem.scrollTop() > nextOffset && next.hasClass('hidden')) next.removeClass('hidden');
+    if (documentElem.scrollTop() > lastOffset && last.hasClass('hidden')) last.removeClass('hidden');
+    if (documentElem.scrollTop() <= nextOffset) next.addClass('hidden');
+    if (documentElem.scrollTop() <= lastOffset) last.addClass('hidden');
+  });
+})();
