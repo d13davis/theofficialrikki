@@ -46,7 +46,7 @@ let unfocusNav = function() {
   }
 };
 
-let gallArray = [$('.gall-1'), $('.gall-2'), $('.gall-3'), $('.gall-4')];
+let gallArray = [$('#gall-01'), $('#gall-02'), $('#gall-03'), $('#gall-04')];
 
 let i = 0;
 
@@ -79,11 +79,64 @@ let lastPic = function() {
   let next = $('#next'),
       nextOffset = next.offset().top,
       last = $('#last'),
-      lastOffset = last.offset().top;
+      lastOffset = last.offset().top,
+      i = 60,
+      gallShCh = $('.gallery-shot-choice'),
+      gallHeader = $('header'),
+      gallHeaderOffset = gallHeader.offset().top,
+      gallC = [$('.c1'), $('.c2'), $('.c3'), $('.c4')];
   documentElem.on('scroll', function() {
     if (documentElem.scrollTop() > nextOffset && next.hasClass('hidden')) next.removeClass('hidden');
     if (documentElem.scrollTop() > lastOffset && last.hasClass('hidden')) last.removeClass('hidden');
     if (documentElem.scrollTop() <= nextOffset) next.addClass('hidden');
     if (documentElem.scrollTop() <= lastOffset) last.addClass('hidden');
+
+    if (documentElem.scrollTop() < i && gallShCh.hasClass('attached')) {
+      gallShCh.removeClass('attached');
+    }
+
+    if (documentElem.scrollTop() > i && !gallShCh.hasClass('attached')) {
+      gallShCh.addClass('attached');
+    }
+
+    if (documentElem.scrollTop() > 10 && toggleNavStatus == true) {
+      unfocusNav();
+    }
+
+
+    if (documentElem.scrollTop() <= (gallArray[0].offset().top - 200)) {//top space d
+      gallC[0].attr('fill', 'none');
+      gallC[1].attr('fill', 'none');
+      gallC[2].attr('fill', 'none');
+      gallC[3].attr('fill', 'none');
+    } else if (documentElem.scrollTop() >= (gallArray[0].offset().top - 200) && documentElem.scrollTop() < gallArray[1].offset().top - 200) {//picture 1 d
+      gallC[0].attr('fill', '#EBFDFD');
+      gallC[1].attr('fill', 'none');
+      gallC[2].attr('fill', 'none');
+      gallC[3].attr('fill', 'none');
+    } else if (documentElem.scrollTop() >= (gallArray[1].offset().top - 200) && documentElem.scrollTop() < gallArray[2].offset().top - 200) {//picture 2 d
+      gallC[1].attr('fill', '#EBFDFD');
+      gallC[0].attr('fill', 'none');
+      gallC[2].attr('fill', 'none');
+      gallC[3].attr('fill', 'none');
+    } else if (documentElem.scrollTop() >= (gallArray[2].offset().top - 200) && documentElem.scrollTop() < gallArray[3].offset().top - 300) {//picture 3
+      gallC[2].attr('fill', '#EBFDFD');
+      gallC[1].attr('fill', 'none');
+      gallC[0].attr('fill', 'none');
+      gallC[3].attr('fill', 'none');
+    } else if (documentElem.scrollTop() >= (gallArray[3].offset().top - 300)) {//picture 4
+      gallC[3].attr('fill', '#EBFDFD');
+      gallC[1].attr('fill', 'none');
+      gallC[2].attr('fill', 'none');
+      gallC[0].attr('fill', 'none');
+    }
+  });
+
+  $(".gallery-shot-option").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      let hash = this.hash;
+      $('html, body').animate({scrollTop: $(hash).offset().top - 10}, 1200, function() {window.location.hash = hash - 10;});
+    }
   });
 })();

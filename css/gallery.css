@@ -171,7 +171,7 @@ html, body {
 .nav-sidebar {
   position: fixed;
   right: 0;
-  top: 70px;
+  top: 60px;
   width: 0px;
   height: 210px;
   padding: 0;
@@ -215,7 +215,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 40vh;
-  width: 100%;
+  width: calc(100% - 58px);
   overflow: hidden;
 }
 
@@ -228,14 +228,59 @@ header h1 {
   padding-top: 25vh;
 }
 
-.gallery-wrapper {
-  background-color: #EBFDFD;
+.gallery-shot-choice {
+  position: absolute;
+  width: 58px;
+  height: 100%;
+  top: 60px;
+  right: 0;
+  background-color: #003E58;
   overflow: hidden;
+  z-index: 1000;
+}
+
+.gallery-shot-choice.attached {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.gallery-shot-choice ul {
   width: 100%;
 }
 
+.gallery-shot-choice li {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+}
+
+.gallery-shot-choice ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.gallery-shot-choice ul li:active {
+  background-color: none;
+  color: #fff;
+}
+
+.gallery-shot-choice ul li svg {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-wrapper {
+  background-color: #EBFDFD;
+  overflow: hidden;
+  width: calc(100% - 58px);
+}
+
 .gallery-wrapper img {
-  width: calc(100vw - 40px);
+  width: calc(100vw - 98px);
   margin: 15px 20px;
 }
 
@@ -266,9 +311,14 @@ header h1 {
   }
   header {
     height: 30vh;
+    width: 100%;
   }
   header h1 {
     padding-top: 20vh;
+    cursor: default;
+  }
+  .gallery-shot-choice {
+    display: none;
   }
   .gallery-wrapper {
     background-color: #EBFDFD;

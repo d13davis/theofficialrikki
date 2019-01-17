@@ -59,6 +59,10 @@ let toggleNav = function() {
     if (documentElem.scrollTop() > aboutMeYellowSpPOffset && aboutMeYellowSpP.hasClass('hidden')) aboutMeYellowSpP.removeClass('hidden');
 
     if (documentElem.scrollTop() > aboutMeQuoteOffset && aboutMeQuote.hasClass('hidden')) aboutMeQuote.removeClass('hidden');
+
+    if (documentElem.scrollTop() > 10 && toggleNavStatus == true) {
+      unfocusNav();
+    }
   });
 })();
 
